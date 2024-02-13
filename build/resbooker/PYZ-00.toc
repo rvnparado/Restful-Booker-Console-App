@@ -1,5 +1,5 @@
 ('C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
- 'Projects\\build\\resbooker\\PYZ-00.pyz',
+ 'Projects\\RESTful Booker Console App\\build\\resbooker\\PYZ-00.pyz',
  [('__future__',
    'C:\\Program Files\\Python312\\Lib\\__future__.py',
    'PYMODULE'),

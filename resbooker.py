@@ -12,7 +12,7 @@ schema_keys = ['firstname','lastname','totalprice','depositpaid','bookingdates',
 auth_details = {'username': 'admin', 'password': 'password123'}
 save_booking = "booking_body.json"
 
-def run(run_again):
+def Main(run_again):
     while run_again in ['Y', 'N']:
         # print(run_again)       
         if run_again == 'N':
@@ -125,12 +125,22 @@ def get_booking():
     bookingid = input('Input booking id?: ')
     booking = f'{BASE_URL}booking/{bookingid}'
     response = requests.get(booking)
-    
-    if response.status_code == 200:
-        data = response.json()
-        print(data)
-    else:
-        print(f"Error: {response.status_code} - {response.text}")
+
+    try:
+        if response.status_code == 200:
+            data = response.json()
+            print(data)
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+
+    except requests.exceptions.HTTPError as errh:
+        print(f"HTTP Error: {errh}")
+    except requests.exceptions.ConnectionError as errc:
+        print(f"Error Connecting: {errc}")
+    except requests.exceptions.Timeout as errt:
+        print(f"Timeout Error: {errt}")
+    except requests.exceptions.RequestException as err:
+        print(f"An error occurred: {err}")
 
 def post_booking(filepath):   
     _, is_booking_save = booking_body()
@@ -342,6 +352,42 @@ def patch_booking(filepath):
     except requests.exceptions.RequestException as err:
         print(f"An error occurred: {err}")  
 
+def delete_booking(filepath):
+    token_created = create_token()
+    headers = {'Content-Type': 'application/json', 'Cookie': f'token={token_created["token"]}'} # always check the headers on the documentation
+    bookingid = input('Input booking id?: ')
+    booking = f'{BASE_URL}booking/{bookingid}'
+    response = requests.get(booking)
+
+    try:
+        if response.status_code == 200:
+            data = response.json()
+            save_body(filepath, data)
+            booking_body_details = load_items(filepath)           
+            while True:
+                deleted_booking = input(f'{booking_body_details}\nDo you want to delete these record? (Y/N)').upper()
+                if deleted_booking in ['Y', 'N']:
+                    if deleted_booking != 'N':
+                        response = requests.delete(booking, headers=headers)
+                        data = response.text # this is text since the response is not on JSON format. 
+                        print(f'{data}\nBookingID: {bookingid} is successfully deleted!')
+                        break
+                    else:
+                        print(f'BookingID: {bookingid} is not deleted!')   
+                else:              
+                    print("Please enter 'Y' for Yes or 'N' for No.")
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+
+    except requests.exceptions.HTTPError as errh:
+        print(f"HTTP Error: {errh}")
+    except requests.exceptions.ConnectionError as errc:
+        print(f"Error Connecting: {errc}")
+    except requests.exceptions.Timeout as errt:
+        print(f"Timeout Error: {errt}")
+    except requests.exceptions.RequestException as err:
+        print(f"An error occurred: {err}")
+        
 def pull_requests():
     method = input(f'What method do you want to use? {methods[0:5]}:').upper()
     if method.upper() in methods:
@@ -355,17 +401,15 @@ def pull_requests():
             return
         elif method.upper() in methods[2:5]:  # 2 is the place to start in the array and 5(number of lists) is the end of the array
             if method.upper() in methods[2]:
-                print(f'METHOD: {method} - not yet developed.')
+                # print(f'METHOD: {method} - not yet developed.')
                 put_booking(save_booking)
             elif method.upper() in methods[3]:
-                print(f'METHOD: {method} - not yet developed.')
+                # print(f'METHOD: {method} - not yet developed.')
                 patch_booking(save_booking)
             elif method.upper() in methods[4]:
-                print(f'METHOD: {methods[4]} - not yet developed.')
+                # print(f'METHOD: {methods[4]} - not yet developed.')
+                delete_booking(save_booking)
     else:
         print('You have entered an unknown HTTP Method!')
 
-run('Y')
-# display_keys(save_booking)
-
-# patch_booking(save_booking)
+Main('Y')

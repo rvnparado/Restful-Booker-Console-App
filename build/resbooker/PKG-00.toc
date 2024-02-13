@@ -1,5 +1,5 @@
 ('C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
- 'Projects\\build\\resbooker\\resbooker.pkg',
+ 'Projects\\RESTful Booker Console App\\build\\resbooker\\resbooker.pkg',
  {'BINARY': True,
   'DATA': True,
   'EXECUTABLE': True,
@@ -12,27 +12,32 @@
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\PYZ-00.pyz',
+   'Projects\\RESTful Booker Console App\\build\\resbooker\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\localpycs\\struct.pyc',
+   'Projects\\RESTful Booker Console '
+   'App\\build\\resbooker\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\localpycs\\pyimod01_archive.pyc',
+   'Projects\\RESTful Booker Console '
+   'App\\build\\resbooker\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\localpycs\\pyimod02_importers.pyc',
+   'Projects\\RESTful Booker Console '
+   'App\\build\\resbooker\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\localpycs\\pyimod03_ctypes.pyc',
+   'Projects\\RESTful Booker Console '
+   'App\\build\\resbooker\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\build\\resbooker\\localpycs\\pyimod04_pywin32.pyc',
+   'Projects\\RESTful Booker Console '
+   'App\\build\\resbooker\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'C:\\Users\\Admin\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
@@ -42,7 +47,7 @@
    'PYSOURCE'),
   ('resbooker',
    'C:\\Users\\Admin\\Documents\\Python Examples\\Trainin\\Automation '
-   'Projects\\resbooker.py',
+   'Projects\\RESTful Booker Console App\\resbooker.py',
    'PYSOURCE')],
  'python312.dll',
  True,
