@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"firstname": "junior", "lastname": "michael", "totalprice": "1234", "depositpaid": false, "bookingdates": {"checkin": "1234-01-01", "checkout": "1234-02-02"}, "additionalneeds": "breakfast"}
+=======
+{"firstname": "ascasvas12341", "lastname": "f1asdf", "totalprice": "123", "depositpaid": true, "bookingdates": {"checkin": "1231-01-01", "checkout": "1231-01-01"}, "additionalneeds": "asvasdgvas"}
+>>>>>>> origin/main
