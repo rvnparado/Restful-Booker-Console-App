@@ -29,15 +29,15 @@ Restful Booker Console App is a simple application that provides functionality t
 ## Usage
 
    **USAGE 1:**
-      1. Clone the repository.
-      2. Install the required dependencies using `pip install -r requirements.txt`.
-      3. Run the application using `python resbooker.py`.
-      4. Follow the on-screen prompts to perform various operations.
+   1. Clone the repository.
+   2. Install the required dependencies using `pip install -r requirements.txt`.
+   3. Run the application using `python resbooker.py`.
+   4. Follow the on-screen prompts to perform various operations.
    
-   **USAGE 2:**
-      1. Open Dist folder
-      2. Open resbooker folder.
-      3. Run the resbooker console app.
+   **USAGE 2:** 
+   1. Open Dist folder
+   2. Open resbooker folder.
+   3. Run the resbooker console app.
 
 ## Dependencies
 
