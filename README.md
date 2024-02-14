@@ -35,9 +35,10 @@ Restful Booker Console App is a simple application that provides functionality t
    4. Follow the on-screen prompts to perform various operations.
    
    **USAGE 2:** 
-   1. Open Dist folder
-   2. Open resbooker folder.
-   3. Run the resbooker console app.
+   1. Clone the repository.
+   2. Open Dist folder
+   3. Open resbooker folder.
+   4. Run the resbooker console app.
 
 ## Dependencies
 
